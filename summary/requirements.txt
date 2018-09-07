@@ -1,0 +1,7 @@
+beautifulsoup4==4.6.3
+Django==2.1.1
+django-bootstrap3==11.0.0
+lxml==4.2.4
+nltk==3.3
+pytz==2018.5
+six==1.11.0

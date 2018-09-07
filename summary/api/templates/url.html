@@ -1,0 +1,27 @@
+{% load bootstrap3 %}
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+<div class="container">
+    <p>
+
+    </p>
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+        <label for="url">Url: </label>
+        <small> work best with blogs/wikipedia. video, images coming soon</small>
+        <input id="url" type="text" name="url" class="form-control mb-2 mr-sm-2 mb-sm-0" required>
+        <label for="sentences"># of sentences (optional, Default is 10): </label>
+        <input id="summary_sentence" type="number" name="summary_sentence" maxlength="10" class="form-control mb-2 mr-sm-2 mb-sm-0">
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <p class="lead">{{summary}}</p>
+    </div>
+</div>
